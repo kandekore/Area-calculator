@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Area Calculator</title>
+  </head>
+  <body>
+    <h1>Area Calculator</h1>
+    <label for="length">Length:</label>
+    <input type="text" id="length" />
+    <select id="lengthUnit">
+      <option value="cm">Centimeters</option>
+      <option value="ft">Feet</option>
+      <option value="in">Inches</option>
+      <option value="m">Meters</option>
+    </select>
+
+    <br />
+
+    <label for="width">Width:</label>
+    <input type="text" id="width" />
+    <select id="widthUnit">
+      <option value="cm">Centimeters</option>
+      <option value="ft">Feet</option>
+      <option value="in">Inches</option>
+      <option value="m">Meters</option>
+    </select>
+
+    <br />
+    <button onclick="calculateArea()">Calculate Area</button>
+    <p id="result"></p>
+
+    <script>
+      function convertToMeters(value, unit) {
+        const conversionFactors = {
+          cm: 0.01,
+          ft: 0.3048,
+          in: 0.0254,
+          m: 1
+        };
+
+        return value * conversionFactors[unit];
+      }
+
+      function calculateArea() {
+        const length = parseFloat(document.getElementById("length").value);
+        const width = parseFloat(document.getElementById("width").value);
+        const lengthUnit = document.getElementById("lengthUnit").value;
+        const widthUnit = document.getElementById("widthUnit").value;
+
+        const lengthInMeters = convertToMeters(length, lengthUnit);
+        const widthInMeters = convertToMeters(width, widthUnit);
+
+        const areaInSquareMeters = lengthInMeters * widthInMeters;
+
+        document.getElementById(
+          "result"
+        ).textContent = `Area: ${areaInSquareMeters.toFixed(2)} square meters`;
+      }
+    </script>
+  </body>
+</html>
