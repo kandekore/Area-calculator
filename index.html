@@ -7,30 +7,90 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <h1>Area Calculator</h1>
-    <label for="length">Length:</label>
-    <input type="text" id="length" />
-    <select id="lengthUnit">
-      <option value="cm">Centimeters</option>
-      <option value="ft">Feet</option>
-      <option value="in">Inches</option>
-      <option value="m">Meters</option>
-    </select>
+    <div class="container">
+      <h1>Area Calculator</h1>
+      <div class="form">
+        <label for="length">Length:</label>
+        <input type="text" id="length" />
+        <select id="lengthUnit">
+          <option value="m">Meters</option>
+          <option value="cm">Centimeters</option>
+          <option value="ft">Feet</option>
+          <option value="in">Inches</option>
+        </select>
 
-    <br />
+        <br />
 
-    <label for="width">Width:</label>
-    <input type="text" id="width" />
-    <select id="widthUnit">
-      <option value="cm">Centimeters</option>
-      <option value="ft">Feet</option>
-      <option value="in">Inches</option>
-      <option value="m">Meters</option>
-    </select>
+        <label for="width">Width:</label>
+        <input type="text" id="width" />
+        <select id="widthUnit">
+          <option value="m">Meters</option>
+          <option value="cm">Centimeters</option>
+          <option value="ft">Feet</option>
+          <option value="in">Inches</option>
+        </select>
 
-    <br />
-    <button onclick="calculateArea()">Calculate Area</button>
-    <p id="result"></p>
+        <br />
+
+        <label for="resultUnit">Result Unit:</label>
+        <select id="resultUnit">
+          <option value="m2">Square Meters (m²)</option>
+          <option value="ft2">Square Feet (ft²)</option>
+          <option value="in2">Square Inches (in²)</option>
+          <option value="cm2">Square Centimeters (cm²)</option>
+        </select>
+
+        <br />
+        <button onclick="calculateArea()">Calculate Area</button>
+        <p id="result"></p>
+      </div>
+
+      <div class="instructions">
+        <h2>Instructions:</h2>
+        <ul>
+          <li>
+            Enter the length of the rectangular space in the "Length" input box.
+          </li>
+          <li>
+            Select the unit of measurement for the length from the dropdown
+            menu.
+          </li>
+          <li>
+            Enter the width of the rectangular space in the "Width" input box.
+          </li>
+          <li>
+            Select the unit of measurement for the width from the dropdown menu.
+          </li>
+          <li>Click the "Calculate Area" button to see the result.</li>
+          <li>
+            The calculated area in square meters will be displayed below the
+            button.
+          </li>
+        </ul>
+      </div>
+
+      <div class="comparison-table">
+        <h2>Unit Comparison:</h2>
+        <table>
+          <tr>
+            <th>Unit</th>
+            <th>1 Meter</th>
+          </tr>
+          <tr>
+            <td>Centimeters</td>
+            <td>100 cm</td>
+          </tr>
+          <tr>
+            <td>Feet</td>
+            <td>3.28084 ft</td>
+          </tr>
+          <tr>
+            <td>Inches</td>
+            <td>39.3701 in</td>
+          </tr>
+        </table>
+      </div>
+    </div>
 
     <script src="script.js"></script>
   </body>
