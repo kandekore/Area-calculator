@@ -1,0 +1,42 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+h1 {
+  text-align: center;
+}
+
+label {
+  display: inline-block;
+  width: 100px;
+}
+
+input[type="text"] {
+  width: 150px;
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+select {
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 8px 15px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+#result {
+  font-size: 18px;
+  margin-top: 20px;
+}
