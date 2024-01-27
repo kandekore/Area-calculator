@@ -45,3 +45,5 @@ To use the Area Calculator locally, follow these steps:
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
+
+Darren Kandekore
